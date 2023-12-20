@@ -1,8 +1,10 @@
+// My Custom Components
 import Header from "../../components/Header";
 
 // Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+
 // import required modules
 import { Navigation, Autoplay, Pagination } from "swiper/modules";
 import "swiper/css/navigation";
@@ -21,7 +23,9 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
+      {/* Hero section */}
       <Swiper
+        className="mt-24"
         modules={[Navigation, Autoplay, Pagination]}
         slidesPerView={1}
         navigation={false}
@@ -118,6 +122,10 @@ function App() {
           </p>
           <img src={cocuk} alt="cocuk" className="w-full h-full" />
         </a>
+      </div>
+      {/* Çok satanlar section */}
+      <div className="mt-24 mb-24">
+        <h2 className="text-center font-semibold text-5xl">ÇOK SATANLAR</h2>
       </div>
     </div>
   );
