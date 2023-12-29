@@ -11,6 +11,10 @@ import Kids from "./pages/kids/kids";
 // Router imports
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+// Redux imports
+import { store } from "./app/store";
+import { Provider } from "react-redux";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,5 +35,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
 );

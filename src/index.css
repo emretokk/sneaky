@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 * {
   outline: none;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 body {
   background-color: white;
@@ -22,4 +26,7 @@ button {
 a {
   display: inline-block;
   text-decoration: none;
+}
+footer {
+  font-family: "Diphylleia", serif;
 }
