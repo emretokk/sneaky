@@ -8,14 +8,18 @@ export const searchFieldSlice = createSlice({
   name: "searchFieldSlice",
   initialState,
   reducers: {
-    toggleSearchField: (state) => {
-      state.searchFieldOn = !state.searchFieldOn;
-      console.log(state.searchFieldOn);
+    openSearchField: (state) => {
+      state.searchFieldOn = true;
+      console.log("focus");
+    },
+    closeSearchField: (state) => {
+      state.searchFieldOn = false;
+      console.log("focus lost");
     },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { toggleSearchField } = searchFieldSlice.actions;
+export const { openSearchField, closeSearchField } = searchFieldSlice.actions;
 
 export default searchFieldSlice.reducer;

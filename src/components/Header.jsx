@@ -1,18 +1,20 @@
 import React from "react";
 import Logo from "../assets/sneaky.png";
 import { Link } from "react-router-dom";
-import { MdSearch, MdOutlineDarkMode } from "react-icons/md";
+import { MdSearch, MdOutlineDarkMode, MdDarkMode } from "react-icons/md";
 
 // Redux imports
 import { useSelector, useDispatch } from "react-redux";
-import { toggleSearchField } from "../features/search";
+import { openSearchField, closeSearchField } from "../features/search";
+import { toggleDarkMode } from "../features/dark";
 
 function Header() {
   const searchFieldOn = useSelector((state) => state.search.searchFieldOn);
+  const darkModeOn = useSelector((state) => state.darkMode.darkModeOn);
   const dispatch = useDispatch();
 
   return (
-    <header className="flex sticky z-0 px-2 border-b border-gray-400 h-20">
+    <header className="flex sticky h-20 z-10 top-0 px-2 border-b border-gray-400">
       {/* Logo area */}
       <div className="p-2">
         <Link to={"/"} className="flex items-center">
@@ -40,20 +42,48 @@ function Header() {
         </ul>
       </div>
       {/* User area --dark mode cart curt */}
-      <div className="flex">
-        <div className="flex gap-4">
-          <div className="flex items-center">
-            <button
-              className="flex items-center"
-              onClick={() => dispatch(toggleSearchField())}
+      <div className="flex gap-4">
+        <div className="flex items-center">
+          <div
+            className="flex items-center hover:cursor-pointer"
+            onClick={() => dispatch(openSearchField())}
+            onBlur={() => dispatch(closeSearchField())}
+          >
+            <MdSearch size={25} />
+            <form
+              className={`${
+                searchFieldOn ? "w-32 transition-all" : "w-0 transition-all"
+              }`}
             >
-              <MdSearch size={25} />
-              {searchFieldOn ? <div>arama acik</div> : ""}
-            </button>
+              <input
+                autoFocus
+                type="text"
+                placeholder="Arama"
+                className={`bg-gray-100 h-full w-full rounded ${
+                  searchFieldOn ? "p-1" : ""
+                }`}
+              />
+            </form>
           </div>
-          <button>
-            <MdOutlineDarkMode size={25} />
-          </button>
+        </div>
+        <div className="flex items-center">
+          {darkModeOn ? (
+            <MdDarkMode
+              size={25}
+              onClick={() => {
+                dispatch(toggleDarkMode());
+              }}
+              className="hover:cursor-pointer"
+            />
+          ) : (
+            <MdOutlineDarkMode
+              size={25}
+              onClick={() => {
+                dispatch(toggleDarkMode());
+              }}
+              className="hover:cursor-pointer"
+            />
+          )}
         </div>
       </div>
     </header>
