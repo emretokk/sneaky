@@ -20,7 +20,7 @@ import cocuk from "./assets/cocuk.jpg";
 
 function App() {
   return (
-    <div className="App">
+    <div className="Home">
       <Header></Header>
       {/* Hero section */}
       <Swiper

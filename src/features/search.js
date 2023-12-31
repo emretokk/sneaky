@@ -10,11 +10,9 @@ export const searchFieldSlice = createSlice({
   reducers: {
     openSearchField: (state) => {
       state.searchFieldOn = true;
-      console.log("focus");
     },
     closeSearchField: (state) => {
       state.searchFieldOn = false;
-      console.log("focus lost");
     },
   },
 });

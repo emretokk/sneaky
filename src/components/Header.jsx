@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Logo from "../assets/sneaky.png";
 import { Link } from "react-router-dom";
 import { MdSearch, MdOutlineDarkMode, MdDarkMode } from "react-icons/md";
@@ -7,14 +7,30 @@ import { MdSearch, MdOutlineDarkMode, MdDarkMode } from "react-icons/md";
 import { useSelector, useDispatch } from "react-redux";
 import { openSearchField, closeSearchField } from "../features/search";
 import { toggleDarkMode } from "../features/dark";
+import { handleScroll } from "../features/scroll";
 
 function Header() {
   const searchFieldOn = useSelector((state) => state.search.searchFieldOn);
   const darkModeOn = useSelector((state) => state.darkMode.darkModeOn);
+  const headerVisible = useSelector((state) => state.scroll.headerVisible);
   const dispatch = useDispatch();
 
+  const handleScrolll = () => {
+    dispatch(handleScroll());
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScrolll);
+
+    return () => window.removeEventListener("scroll", handleScrolll);
+  }, []);
+
   return (
-    <header className="flex sticky h-20 z-10 top-0 px-2 border-b border-gray-400">
+    <header
+      className={`${
+        headerVisible ? "top-0 " : "-top-20"
+      } flex sticky h-20 z-10 px-2 border-b border-gray-400 bg-orange-100 transition-all duration-300`}
+    >
       {/* Logo area */}
       <div className="p-2">
         <Link to={"/"} className="flex items-center">
