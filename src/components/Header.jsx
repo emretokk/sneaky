@@ -15,14 +15,14 @@ function Header() {
   const headerVisible = useSelector((state) => state.scroll.headerVisible);
   const dispatch = useDispatch();
 
-  const handleScrolll = () => {
-    dispatch(handleScroll());
-  };
-
   useEffect(() => {
+    const handleScrolll = () => {
+      dispatch(handleScroll());
+    };
     window.addEventListener("scroll", handleScrolll);
 
     return () => window.removeEventListener("scroll", handleScrolll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
