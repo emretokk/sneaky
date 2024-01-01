@@ -20,7 +20,7 @@ import cocuk from "./assets/cocuk.jpg";
 
 function App() {
   return (
-    <div className="Home">
+    <div id="Home">
       <Header></Header>
       {/* Hero section */}
       <Swiper
@@ -34,6 +34,9 @@ function App() {
         }}
         pagination={{
           dynamicBullets: true,
+        }}
+        style={{
+          "--swiper-pagination-color": "#00CF2A",
         }}
       >
         <SwiperSlide
@@ -70,20 +73,25 @@ function App() {
         </SwiperSlide>
       </Swiper>
       {/*kadin erkek cocuk section*/}
-      <div className="flex justify-center w-full text-center mt-24">
-        <a href="/kadin" className="w-1/3 h-[600px] relative p-2">
+      <div>
+        <h1 className="mt-24 mb-4 px-2 text-xl font-semibold">
+          Size özel tüm ayakkabıları keşfedin
+        </h1>
+      </div>
+      <div className="flex px-2 justify-between w-full text-center">
+        <a href="/kadin" className="w-[33%] h-[600px] relative">
           <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-3xl font-semibold">
             Kadın
           </p>
           <img src={kadin} alt="kadin" className="w-full h-full" />
         </a>
-        <a href="/erkek" className="w-1/3 h-[600px] relative p-2">
+        <a href="/erkek" className="w-[33%] h-[600px] relative">
           <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-3xl font-semibold">
             Erkek
           </p>
           <img src={erkek} alt="erkek" className="w-full h-full" />
         </a>
-        <a href="/cocuk" className="w-1/3 h-[600px] relative p-2">
+        <a href="/cocuk" className="w-[33%] h-[600px] relative">
           <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-3xl font-semibold">
             Çocuk
           </p>
@@ -100,7 +108,7 @@ function App() {
           spaceBetween={30}
           loop={true}
           style={{
-            "--swiper-pagination-color": "#007aff",
+            "--swiper-pagination-color": "#00CF2A",
           }}
           autoplay={{
             delay: 2000,
