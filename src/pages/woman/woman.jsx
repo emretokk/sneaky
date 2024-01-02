@@ -12,7 +12,7 @@ function Woman() {
         {/* listing area */}
         <div className="p-12">
           {/* filter order cart curt */}
-          <div className="flex bg-orange-200">
+          <div className="flex">
             <p className="flex-none">31 ürün bulundu</p>
             <div className="flex-auto flex flex-row-reverse">
               <div>sırala</div>
@@ -20,7 +20,7 @@ function Woman() {
             </div>
           </div>
           {/* products */}
-          <div className="h-32 w-full bg-green-700">asdfa</div>
+          <div className="h-80 w-full bg-green-700"></div>
         </div>
       </div>
       <Footer />
