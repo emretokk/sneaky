@@ -63,9 +63,6 @@ function Footer() {
           <a href="#" className="text-sm">
             Tik Tok
           </a>
-          <a href="#" className="text-sm">
-            Running
-          </a>
         </div>
       </div>
       <div className="flex p-1">
