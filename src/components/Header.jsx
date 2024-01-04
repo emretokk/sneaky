@@ -29,7 +29,7 @@ function Header() {
     <header
       className={`${
         headerVisible ? "top-0 " : "-top-20"
-      } flex sticky h-20 z-10 px-2 border-b border-gray-400 bg-green-50 transition-all duration-300`}
+      } flex sticky h-20 z-10 px-2 border-b border-gray-400 bg-white transition-all duration-300`}
     >
       {/* Logo area */}
       <div className="p-2">

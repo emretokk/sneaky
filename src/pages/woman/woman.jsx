@@ -19,8 +19,17 @@ function Woman() {
               <div>filtrele</div>
             </div>
           </div>
-          {/* products */}
-          <div className="h-80 w-full bg-green-700"></div>
+          {/* products container */}
+          <div className="w-full mt-2">
+            {/* products grid */}
+            <div className="grid grid-cols-4 gap-4">
+              <div className="bg-gray-100 h-96">apsdf</div>
+              <div className="bg-gray-100 h-96">apsdf</div>
+              <div className="bg-gray-100 h-96">apsdf</div>
+              <div className="bg-gray-100 h-96">apsdf</div>
+              <div className="bg-gray-100 h-96">apsdf</div>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
