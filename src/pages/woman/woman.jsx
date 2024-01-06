@@ -2,6 +2,9 @@ import React from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
+import img1 from "../../database/testImgs/converse1.jpg";
+import img2 from "../../database/testImgs/jordan1.jpg";
+
 function Woman() {
   return (
     <div id="Woman">
@@ -23,11 +26,12 @@ function Woman() {
           <div className="w-full mt-2">
             {/* products grid */}
             <div className="grid grid-cols-4 gap-4">
-              <div className="bg-gray-100 h-96">apsdf</div>
-              <div className="bg-gray-100 h-96">apsdf</div>
-              <div className="bg-gray-100 h-96">apsdf</div>
-              <div className="bg-gray-100 h-96">apsdf</div>
-              <div className="bg-gray-100 h-96">apsdf</div>
+              <div className="bg-gray-100 h-96">
+                <img src={img1} alt="converse" className="w-full h-56" />
+              </div>
+              <div className="bg-gray-100 h-96">
+                <img src={img2} alt="converse" />
+              </div>
             </div>
           </div>
         </div>
