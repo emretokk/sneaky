@@ -15,6 +15,13 @@ export const darkModeSlice = createSlice({
       state.darkModeOn = false;
     },
     toggleDarkMode: (state) => {
+      const element = document.querySelector("html");
+      if (state.darkModeOn) {
+        element.classList.remove("dark");
+      } else {
+        element.classList.add("dark");
+      }
+
       state.darkModeOn = !state.darkModeOn;
       console.log("dark mode: ", state.darkModeOn);
     },
