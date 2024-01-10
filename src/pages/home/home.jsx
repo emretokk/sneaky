@@ -14,17 +14,17 @@ import "swiper/css/pagination";
 // img imports
 import ayak1 from "../../database/testImgs/converse1.jpg";
 import ayak2 from "../../database/testImgs/jordan1.jpg";
+import nike1 from "../../database/testImgs/nike1.png";
 import kadin from "./assets/kadin.jpg";
 import erkek from "./assets/erkek.jpg";
 import cocuk from "./assets/cocuk.jpg";
 
 function App() {
   return (
-    <div id="Home">
+    <div id="Home" className="dark:bg-bg1">
       <Header></Header>
       {/* Hero section */}
       <Swiper
-        className="mt-16"
         modules={[Navigation, Autoplay, Pagination]}
         slidesPerView={1}
         navigation={false}
@@ -47,11 +47,11 @@ function App() {
           }}
         >
           <img
-            src={ayak1}
+            src={nike1}
             alt="jordan"
             style={{
-              width: "800px",
-              height: "500px",
+              width: "700px",
+              height: "700px",
             }}
           />
         </SwiperSlide>
@@ -63,18 +63,18 @@ function App() {
           }}
         >
           <img
-            src={ayak2}
+            src={nike1}
             alt="jordan"
             style={{
-              width: "800px",
-              height: "500px",
+              width: "700px",
+              height: "700px",
             }}
           />
         </SwiperSlide>
       </Swiper>
       {/*kadin erkek cocuk section*/}
       <div>
-        <h1 className="mt-24 mb-4 px-2 text-xl font-semibold">
+        <h1 className="mt-24 mb-4 px-2 text-xl font-semibold dark:text-white">
           Size özel tüm ayakkabıları keşfedin
         </h1>
       </div>
@@ -100,11 +100,11 @@ function App() {
       </div>
       {/* Çok satanlar section */}
       <div className="mt-24 mb-24">
-        <h2 className="text-center font-semibold text-5xl mb-10">
+        <h2 className="text-center font-semibold text-5xl mb-10 dark:text-white">
           ÇOK SATANLAR
         </h2>
         <Swiper
-          slidesPerView={2}
+          slidesPerView={3}
           spaceBetween={30}
           loop={true}
           style={{
@@ -123,7 +123,7 @@ function App() {
         >
           <SwiperSlide>
             <img
-              src={ayak1}
+              src={nike1}
               alt="jordan"
               style={{
                 width: "800px",
@@ -133,7 +133,7 @@ function App() {
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src={ayak1}
+              src={nike1}
               alt="jordan"
               style={{
                 width: "800px",
@@ -143,7 +143,7 @@ function App() {
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src={ayak1}
+              src={nike1}
               alt="jordan"
               style={{
                 width: "800px",
@@ -153,7 +153,7 @@ function App() {
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src={ayak1}
+              src={nike1}
               alt="jordan"
               style={{
                 width: "800px",
@@ -163,7 +163,7 @@ function App() {
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src={ayak1}
+              src={nike1}
               alt="jordan"
               style={{
                 width: "800px",
@@ -173,7 +173,7 @@ function App() {
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src={ayak1}
+              src={nike1}
               alt="jordan"
               style={{
                 width: "800px",
