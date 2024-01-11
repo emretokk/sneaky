@@ -1,4 +1,5 @@
 import React from "react";
+import { FaInstagram, FaTwitter, FaTiktok, FaYoutube } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -62,14 +63,21 @@ function Footer() {
           <h1 className="text-2xl font-semibold mb-2 dark:text-primary">
             Sosyal Medya
           </h1>
-          <a href="#" className="text-sm">
-            İnstagram
+          <a href="#" className="flex items-center gap-1 text-sm">
+            <FaInstagram />
+            <p>Instagram</p>
           </a>
-          <a href="#" className="text-sm">
-            Twitter
+          <a href="#" className="flex items-center gap-1 text-sm">
+            <FaTwitter />
+            <p>Twitter</p>
           </a>
-          <a href="#" className="text-sm">
-            Tik Tok
+          <a href="#" className="flex items-center gap-1 text-sm">
+            <FaTiktok />
+            <p>TikTok</p>
+          </a>
+          <a href="#" className="flex items-center gap-1 text-sm">
+            <FaYoutube />
+            <p>Youtube</p>
           </a>
         </div>
       </div>
