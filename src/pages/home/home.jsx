@@ -18,6 +18,7 @@ import nike1 from "../../database/testImgs/nike1.png";
 import kadin from "./assets/kadin.jpg";
 import erkek from "./assets/erkek.jpg";
 import cocuk from "./assets/cocuk.jpg";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -79,24 +80,24 @@ function App() {
         </h1>
       </div>
       <div className="flex px-2 justify-between w-full text-center">
-        <a href="/kadin" className="w-[33%] h-[600px] relative">
+        <Link to="/kadin" className="w-[33%] h-[600px] relative">
           <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-3xl font-semibold">
             Kadın
           </p>
           <img src={kadin} alt="kadin" className="w-full h-full" />
-        </a>
-        <a href="/erkek" className="w-[33%] h-[600px] relative">
+        </Link>
+        <Link to="/erkek" className="w-[33%] h-[600px] relative">
           <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-3xl font-semibold">
             Erkek
           </p>
           <img src={erkek} alt="erkek" className="w-full h-full" />
-        </a>
-        <a href="/cocuk" className="w-[33%] h-[600px] relative">
+        </Link>
+        <Link to="/cocuk" className="w-[33%] h-[600px] relative">
           <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-3xl font-semibold">
             Çocuk
           </p>
           <img src={cocuk} alt="cocuk" className="w-full h-full" />
-        </a>
+        </Link>
       </div>
       {/* Çok satanlar section */}
       <div className="mt-24 mb-24">
