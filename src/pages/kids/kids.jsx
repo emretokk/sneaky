@@ -7,7 +7,7 @@ import img2 from "../../database/testImgs/jordan1.jpg";
 
 function Kids() {
   return (
-    <div id="Kids">
+    <div id="Kids" className="dark:bg-bg1 dark:text-white">
       <Header />
       {/* Content */}
       <div>
