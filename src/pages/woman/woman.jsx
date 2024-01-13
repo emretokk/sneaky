@@ -5,6 +5,11 @@ import Footer from "../../components/Footer";
 import img1 from "../../database/testImgs/converse1.jpg";
 import img2 from "../../database/testImgs/jordan1.jpg";
 
+import { IoFilterCircleOutline, IoFilterCircle } from "react-icons/io5";
+import { VscFilter, VscFilterFilled } from "react-icons/vsc";
+
+import { Link } from "react-router-dom";
+
 function Woman() {
   return (
     <div id="Woman" className="dark:bg-bg1 dark:text-white">
@@ -17,9 +22,15 @@ function Woman() {
           {/* filter order cart curt */}
           <div className="flex">
             <p className="flex-none">31 ürün bulundu</p>
-            <div className="flex-auto flex flex-row-reverse">
-              <div>sırala</div>
-              <div>filtrele</div>
+            <div className="flex-auto flex flex-row-reverse items-center gap-1">
+              {/* Filter */}
+              <Link to="/kadin">
+                <VscFilter size={25} />
+              </Link>
+              {/* Order */}
+              <Link to="/kadin">
+                <IoFilterCircleOutline size={25} />
+              </Link>
             </div>
           </div>
           {/* products container */}

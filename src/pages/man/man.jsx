@@ -4,6 +4,9 @@ import Footer from "../../components/Footer";
 
 import img1 from "../../database/testImgs/converse1.jpg";
 import img2 from "../../database/testImgs/jordan1.jpg";
+import { Link } from "react-router-dom";
+import { VscFilter } from "react-icons/vsc";
+import { IoFilterCircleOutline } from "react-icons/io5";
 
 function Man() {
   return (
@@ -18,8 +21,14 @@ function Man() {
           <div className="flex">
             <p className="flex-none">31 ürün bulundu</p>
             <div className="flex-auto flex flex-row-reverse">
-              <div>sırala</div>
-              <div>filtrele</div>
+              {/* Filter */}
+              <Link to="/erkek">
+                <VscFilter size={25} />
+              </Link>
+              {/* Order */}
+              <Link to="/erkek">
+                <IoFilterCircleOutline size={25} />
+              </Link>
             </div>
           </div>
           {/* products container */}
