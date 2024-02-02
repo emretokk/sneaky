@@ -10,7 +10,19 @@ import { VscFilter, VscFilterFilled } from "react-icons/vsc";
 
 import { Link } from "react-router-dom";
 
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { getProducts } from "../../features/getProducts";
+
 function Woman() {
+  const dispatch = useDispatch();
+  const { loading, data } = useSelector((state) => state.products);
+
+  useEffect(() => {
+    dispatch(getProducts());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  console.log(data);
   return (
     <div id="Woman" className="dark:bg-bg1 dark:text-white">
       <Header />
@@ -21,7 +33,7 @@ function Woman() {
         <div className="p-12">
           {/* filter order cart curt */}
           <div className="flex">
-            <p className="flex-none">31 ürün bulundu</p>
+            <p className="flex-none">8 ürün bulundu</p>
             <div className="flex-auto flex flex-row-reverse items-center gap-1">
               {/* Filter */}
               <Link to="/kadin">

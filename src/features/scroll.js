@@ -10,7 +10,7 @@ export const handleScrollSlice = createSlice({
   initialState,
   reducers: {
     handleScroll: (state) => {
-      console.log("handlescroll invoked");
+      // console.log("handlescroll invoked");
       const currentScrollPosition = window.scrollY;
       if (currentScrollPosition > state.previousScrollPosition) {
         state.headerVisible = false;

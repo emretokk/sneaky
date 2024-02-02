@@ -19,7 +19,7 @@ function Kids() {
         <div className="p-12">
           {/* filter order cart curt */}
           <div className="flex">
-            <p className="flex-none">31 ürün bulundu</p>
+            <p className="flex-none">8 ürün bulundu</p>
             <div className="flex-auto flex flex-row-reverse">
               {/* Filter */}
               <Link to="/cocuk">
