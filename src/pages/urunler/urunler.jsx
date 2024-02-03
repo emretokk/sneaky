@@ -2,12 +2,8 @@ import React from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
-import {
-  IoFilterCircleOutline,
-  IoFilterCircle,
-  IoTerminal,
-} from "react-icons/io5";
-import { VscFilter, VscFilterFilled } from "react-icons/vsc";
+import { IoFilterCircleOutline } from "react-icons/io5";
+import { VscFilter } from "react-icons/vsc";
 
 import { Link } from "react-router-dom";
 
@@ -16,7 +12,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getProducts } from "../../features/getProducts";
 import Product from "../../components/product";
 
-function Woman() {
+function Urunler() {
   const dispatch = useDispatch();
   const { loading, productsData } = useSelector((state) => state.products);
 
@@ -26,11 +22,11 @@ function Woman() {
   }, []);
 
   return (
-    <div id="Woman" className="dark:bg-bg1 dark:text-white">
+    <div className="dark:bg-bg1 dark:text-white">
       <Header />
       {/* Content */}
       <div>
-        <h1 className="mt-10 text-center font-semibold text-xl">Kadın</h1>
+        <h1 className="mt-10 text-center font-semibold text-xl">Ürünler</h1>
         {/* listing area */}
         <div className="p-12">
           {/* filter order cart curt */}
@@ -38,11 +34,11 @@ function Woman() {
             <p className="flex-none">{productsData.length} ürün bulundu</p>
             <div className="flex-auto flex flex-row-reverse items-center gap-1">
               {/* Filter */}
-              <Link to="/kadin">
+              <Link to="/urunler">
                 <VscFilter size={25} />
               </Link>
               {/* Order */}
-              <Link to="/kadin">
+              <Link to="/urunler">
                 <IoFilterCircleOutline size={25} />
               </Link>
             </div>
@@ -63,4 +59,4 @@ function Woman() {
   );
 }
 
-export default Woman;
+export default Urunler;

@@ -4,9 +4,7 @@ import "./index.css";
 
 // Page imports
 import Home from "./pages/home/home";
-import Man from "./pages/man/man";
-import Woman from "./pages/woman/woman";
-import Kids from "./pages/kids/kids";
+import Urunler from "./pages/urunler/urunler";
 
 // Router imports
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -14,6 +12,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // Redux imports
 import { store } from "./app/store";
 import { Provider } from "react-redux";
+import Brands from "./pages/markalar/brands";
+import Categories from "./pages/kategoriler/categories";
 
 const router = createBrowserRouter([
   {
@@ -21,16 +21,16 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "erkek",
-    element: <Man />,
+    path: "urunler",
+    element: <Urunler />,
   },
   {
-    path: "kadin",
-    element: <Woman />,
+    path: "markalar",
+    element: <Brands />,
   },
   {
-    path: "cocuk",
-    element: <Kids />,
+    path: "kategoriler",
+    element: <Categories />,
   },
 ]);
 

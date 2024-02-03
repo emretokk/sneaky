@@ -27,6 +27,25 @@ a {
   display: inline-block;
   text-decoration: none;
 }
-footer {
-  font-family: "Diphylleia", serif;
+/* 
+.swiper-button-prev {
+  background-color: red !important;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
 }
+
+.swiper-button-next {
+  background-color: red !important;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev::after {
+  display: none;
+} */
