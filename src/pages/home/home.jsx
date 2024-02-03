@@ -12,13 +12,56 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // img imports
-import ayak1 from "../../database/testImgs/converse1.jpg";
-import ayak2 from "../../database/testImgs/jordan1.jpg";
+import shoe1 from "../../database/imgs/1.png";
+import shoe2 from "../../database/imgs/2.png";
+import shoe3 from "../../database/imgs/3.png";
+import shoe4 from "../../database/imgs/4.png";
+import shoe5 from "../../database/imgs/5.png";
+import shoe6 from "../../database/imgs/6.png";
+
 import nike1 from "../../database/testImgs/nike1.png";
 import kadin from "./assets/kadin.jpg";
 import erkek from "./assets/erkek.jpg";
 import cocuk from "./assets/cocuk.jpg";
 import { Link } from "react-router-dom";
+
+const heroSlide = (img) => {
+  return (
+    <SwiperSlide
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <img
+        src={img}
+        alt="jordan"
+        style={{
+          width: "700px",
+          height: "700px",
+          objectFit: "contain",
+        }}
+      />
+    </SwiperSlide>
+  );
+};
+
+const bestSellerSlide = (img) => {
+  return (
+    <SwiperSlide>
+      <img
+        src={img}
+        alt="jordan"
+        style={{
+          width: "800px",
+          height: "500px",
+          objectFit: "contain",
+        }}
+      />
+    </SwiperSlide>
+  );
+};
 
 function App() {
   return (
@@ -39,39 +82,11 @@ function App() {
         style={{
           "--swiper-pagination-color": "#00CF2A",
         }}
+        className="mt-2"
       >
-        <SwiperSlide
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <img
-            src={nike1}
-            alt="jordan"
-            style={{
-              width: "700px",
-              height: "700px",
-            }}
-          />
-        </SwiperSlide>
-        <SwiperSlide
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <img
-            src={nike1}
-            alt="jordan"
-            style={{
-              width: "700px",
-              height: "700px",
-            }}
-          />
-        </SwiperSlide>
+        {heroSlide(shoe2)}
+        {heroSlide(shoe3)}
+        {heroSlide(shoe5)}
       </Swiper>
       {/*kadin erkek cocuk section*/}
       <div>
@@ -122,66 +137,12 @@ function App() {
           modules={[Pagination, Autoplay]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <img
-              src={nike1}
-              alt="jordan"
-              style={{
-                width: "800px",
-                height: "500px",
-              }}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={nike1}
-              alt="jordan"
-              style={{
-                width: "800px",
-                height: "500px",
-              }}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={nike1}
-              alt="jordan"
-              style={{
-                width: "800px",
-                height: "500px",
-              }}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={nike1}
-              alt="jordan"
-              style={{
-                width: "800px",
-                height: "500px",
-              }}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={nike1}
-              alt="jordan"
-              style={{
-                width: "800px",
-                height: "500px",
-              }}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={nike1}
-              alt="jordan"
-              style={{
-                width: "800px",
-                height: "500px",
-              }}
-            />
-          </SwiperSlide>
+          {bestSellerSlide(shoe1)}
+          {bestSellerSlide(shoe2)}
+          {bestSellerSlide(shoe3)}
+          {bestSellerSlide(shoe4)}
+          {bestSellerSlide(shoe5)}
+          {bestSellerSlide(shoe6)}
         </Swiper>
       </div>
       {/* Footer */}
