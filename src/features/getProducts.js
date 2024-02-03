@@ -10,7 +10,7 @@ export const productsSlice = createSlice({
   name: "products",
   initialState: {
     loading: true,
-    data: {},
+    productsData: [],
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -19,7 +19,7 @@ export const productsSlice = createSlice({
     });
     builder.addCase(getProducts.fulfilled, (state, action) => {
       state.loading = false;
-      state.data = action.payload;
+      state.productsData = action.payload;
     });
   },
 });
