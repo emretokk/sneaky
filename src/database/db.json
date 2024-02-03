@@ -5,20 +5,23 @@
       "title": "nike air force",
       "category": "Klasik",
       "price": 699.5,
-      "oldPrice": 900
+      "oldPrice": 900,
+      "imgName": "1.png"
     },
     {
       "id": 2,
       "title": "nike air max",
       "category": "Koşu",
-      "price": 1200
+      "price": 1200,
+      "imgName": "2.png"
     },
     {
       "id": 3,
       "title": "nike air jordan",
       "category": "Basketbol",
       "price": 999,
-      "oldPrice": 1300
+      "oldPrice": 1300,
+      "imgName": "3.png"
     }
   ]
 }

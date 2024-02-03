@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import img1 from "../database/testImgs/converse1.jpg";
 import img2 from "../database/testImgs/jordan1.jpg";
@@ -6,7 +6,14 @@ import img2 from "../database/testImgs/jordan1.jpg";
 function Product(props) {
   return (
     <div className="h-96">
-      <img src={img1} alt="converse" className="w-full h-64" />
+      <img
+        src={require(`../database/imgs/${props.info.imgName}`)}
+        alt="converse"
+        className="w-full h-64"
+        style={{
+          objectFit: "contain",
+        }}
+      />
       <h2 className="mt-1 font-medium text-xl truncate">{props.info.title}</h2>
       <p className="h-5 w-full text-sm font-light text-gray-500">
         {props.info.category}
