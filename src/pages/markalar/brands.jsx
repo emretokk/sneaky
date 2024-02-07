@@ -5,6 +5,7 @@ import Footer from "../../components/Footer";
 // imgs
 import kinetix from "../../database/testImgs/kinetix.png";
 import polo from "../../database/testImgs/polo.png";
+import nikeShowcase from "../../database/imgs/nikeShowcase.png";
 
 // Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -26,8 +27,10 @@ function Brands() {
     <div>
       <Header />
       {/* Page content */}
-      <div className="p-12">
-        <h2 className="font-extrabold text-lg">Popüler Markalar</h2>
+      <div className="p-12 dark:bg-bg1 dark:text-white">
+        <h2 className="mb-4 font-extrabold text-lg dark:text-primary">
+          Popüler Markalar
+        </h2>
         <div>
           <Swiper
             modules={[Navigation]}
@@ -57,8 +60,19 @@ function Brands() {
             {getBrandJsx(kinetix)}
           </Swiper>
         </div>
-        <h2 className="font-extrabold text-lg">Tüm Markalar</h2>
-        <div></div>
+        <h2 className="mt-12 font-extrabold text-lg dark:text-primary">
+          Tüm Markalar
+        </h2>
+        <div className="mt-8">
+          <div className="grid grid-cols-2 gap-3 ">
+            <img src={nikeShowcase} alt="asdfasfd" className="w-full h-56" />
+            <img src={nikeShowcase} alt="asdfasfd" className="w-full h-56" />
+            <img src={nikeShowcase} alt="asdfasfd" className="w-full h-56" />
+            <img src={nikeShowcase} alt="asdfasfd" className="w-full h-56" />
+            <img src={nikeShowcase} alt="asdfasfd" className="w-full h-56" />
+            <img src={nikeShowcase} alt="asdfasfd" className="w-full h-56" />
+          </div>
+        </div>
       </div>
       <Footer />
     </div>
