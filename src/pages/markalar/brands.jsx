@@ -13,6 +13,14 @@ import { Navigation } from "swiper/modules";
 import "swiper/less/navigation";
 import "swiper/css";
 
+const getBrandJsx = (img) => {
+  return (
+    <SwiperSlide>
+      <img src={img} alt="sdf" className="w-36 h-36 object-contain" />
+    </SwiperSlide>
+  );
+};
+
 function Brands() {
   return (
     <div>
@@ -33,54 +41,20 @@ function Brands() {
               "--swiper-navigation-color": "#00CF2A",
             }}
           >
-            <SwiperSlide>
-              <img src={kinetix} alt="sdf" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={polo} alt="sdf" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={kinetix} alt="sdf" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={polo} alt="sdf" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={kinetix} alt="sdf" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={polo} alt="sdf" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={kinetix} alt="sdf" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={polo} alt="sdf" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={kinetix} alt="sdf" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={polo} alt="sdf" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={kinetix} alt="sdf" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={polo} alt="sdf" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={kinetix} alt="sdf" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={polo} alt="sdf" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={kinetix} alt="sdf" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={polo} alt="sdf" />
-            </SwiperSlide>
+            {getBrandJsx(kinetix)}
+            {getBrandJsx(polo)}
+            {getBrandJsx(kinetix)}
+            {getBrandJsx(kinetix)}
+            {getBrandJsx(kinetix)}
+            {getBrandJsx(kinetix)}
+            {getBrandJsx(kinetix)}
+            {getBrandJsx(kinetix)}
+            {getBrandJsx(kinetix)}
+            {getBrandJsx(kinetix)}
+            {getBrandJsx(kinetix)}
+            {getBrandJsx(kinetix)}
+            {getBrandJsx(kinetix)}
+            {getBrandJsx(kinetix)}
           </Swiper>
         </div>
         <h2 className="font-extrabold text-lg">Tüm Markalar</h2>
