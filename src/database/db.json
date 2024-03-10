@@ -29,6 +29,13 @@
       "category": "Klasik",
       "price": 123,
       "imgName": "4.png"
+    },
+    {
+      "id": 5,
+      "title": "adidas",
+      "category": "Koşu",
+      "price": 750,
+      "imgName": "6.png"
     }
   ]
 }
